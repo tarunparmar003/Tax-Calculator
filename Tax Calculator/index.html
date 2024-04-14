@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Tax Calculator</title>
+</head>
+
+<body>
+    <div class="hero-section">
+        <div class="gross-annual-income">
+            <div class="mylabel"><label for="annual-income">Enter gross annual income</label>
+                <i class="fa-solid fa-lightbulb" id="bulb1">
+                    <object class="myindication1">Gross annual income is your total salary in a year  before any deductions</object>
+                </i>
+            </div>
+            
+            <input type="number" id="annual-income" name="annualincome" placeholder="Enter gross annual income"
+                inputmode="numeric">
+
+        </div>
+
+        <div class="extra-income">
+            <div class="mylabel"><label for="extra-income-input">Enter extra income</label>
+                <i class="fa-solid fa-lightbulb" id="bulb2">
+                    <object class="myindication2"> If any other income then please enter in numerics</object>
+                </i>
+            </div>
+
+
+            <input type="number" id="extra-income-input" name="extraincome"
+                placeholder="Enter extra income for other resources" inputmode="numeric">
+        </div>
+
+
+        <div class="age-group">
+
+            <div class="mylabel">
+                  <label for="age-group-input">Enter age group</label>
+                  <i class="fa-solid fa-lightbulb" id="bulb3">
+                    <object class="myindication3"> Your age must be  mandatory</object>
+                  </i>
+            </div>
+
+          
+
+            <input type="number" id="age-group-input" name="agegroup" inputmode="numeric">
+        </div>
+
+        <div class="deduction">
+            <div class="mylabel">
+                
+            <label for="applicable-deductions">Enter total applicable deduction</label>
+            <i class="fa-solid fa-lightbulb" id="bulb4">
+                <object class="myindication4">Enter amount of  your expenses like rents,bills and other </object>
+
+            </i>
+
+            </div>
+
+
+            <input type="number" id="applicable-deductions" name="applicabledeductions"
+                placeholder="Add total applicable deduction" inputmode="numeric">
+        </div>
+
+
+        <div class="btn-1"> <button class="submit" onclick="myEvent()">Submit</button> </div>
+
+
+    </div>
+
+    <div class="output-box">
+        <div class="context">
+            <h1>Your overall income will be</h1>
+        </div>
+        <div class="my-output">
+            <span class="tax">
+
+            </span>
+        </div>
+        <div class="small-content">
+            <p class="s-content"> after tax deduction </p>
+        </div>
+        <div class="btn">
+            <button class="close" onclick="myEvent2()">Close</button>
+        </div>
+    </div>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

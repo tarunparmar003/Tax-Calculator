@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("richard-horvath-cPccYbPrF-A-unsplash.jpg");
+  background-size: cover;
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.hero-section {
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 60%;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  color: white;
+  font-size: 1.3rem;
+  margin: 1rem;
+  font-weight: 700;
+  position: relative;
+}
+.gross-annual-income,
+.extra-income,
+.age-group,
+.deduction {
+  display: flex;
+  justify-content: last baseline;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+#annual-income,
+#extra-income-input,
+#age-group-input,
+#applicable-deductions {
+  padding: 0.5rem;
+  width: 50%;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.37);
+}
+
+.btn-1 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit {
+  width: 60%;
+  height: 3rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  color: white;
+  font-size: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.output-box {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 60%;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  color: white;
+  font-size: 1.7rem;
+  z-index: 1;
+  margin: 5rem;
+  font-weight: 700;
+  position: absolute;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+.mylabel {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.close {
+  width: 100%;
+  height: 3rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+
+  color: white;
+  font-size: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+span {
+  color: rgb(0, 255, 30);
+  font-size: 4rem;
+}
+
+#bulb1,
+#bulb2,
+#bulb3,
+#bulb4 {
+  color: yellow;
+  position: relative;
+  cursor: help;
+}
+
+#bulb1 .myindication1 {
+  background-color: rgb(64, 62, 62);
+  width: 100px;
+  text-align: center;
+  position: absolute;
+
+  color: white;
+  visibility: hidden;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: sans-serif;
+  bottom: 20px;
+  padding: 6px;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 1rem;
+}
+
+#bulb1:hover .myindication1 {
+  visibility: visible;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+#bulb2 .myindication2 {
+  background-color: rgb(64, 62, 62);
+  width: 100px;
+  text-align: center;
+  position: absolute;
+
+  color: white;
+  visibility: hidden;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: sans-serif;
+  bottom: 20px;
+  padding: 6px;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 1rem;
+}
+
+#bulb2:hover .myindication2 {
+  visibility: visible;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+#bulb3 .myindication3 {
+  background-color: rgb(64, 62, 62);
+  width: 100px;
+  text-align: center;
+  position: absolute;
+
+  color: white;
+  visibility: hidden;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: sans-serif;
+  bottom: 20px;
+  padding: 6px;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 1rem;
+}
+
+#bulb3:hover .myindication3 {
+  visibility: visible;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+#bulb4 .myindication4 {
+  background-color: rgb(64, 62, 62);
+  width: 100px;
+  text-align: center;
+  position: absolute;
+
+  color: white;
+  visibility: hidden;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: sans-serif;
+  bottom: 20px;
+  left: -10px;
+  padding: 5px;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 1rem;
+}
+
+#bulb4:hover .myindication4 {
+  visibility: visible;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .gross-annual-income,
+  .extra-income,
+  .age-group,
+  .deduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  #annual-income,
+  #extra-income-input,
+  #age-group-input,
+  #applicable-deductions {
+    width: 50%;
+    height: 20px;
+  }
+  .mylabel {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    align-items: center;
+  }
+
+  .hero-section,
+  .btn-1,
+  .submit {
+    font-size: 1rem;
+  }
+  .output-box {
+    width: 90%;
+    height: 60%;
+    font-size: 1.5rem;
+  }
+  .output-box h1 {
+    font-size: 1.5rem;
+  }
+  span {
+    font-size: 2rem;
+  }
+  .mylabel {
+    font-size: small;
+  }
+}
